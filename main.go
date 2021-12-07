@@ -7,6 +7,7 @@ import (
 
 	"github.com/vincentharrius/aoc21/day1"
 	"github.com/vincentharrius/aoc21/day2"
+	"github.com/vincentharrius/aoc21/day3"
 )
 
 func main() {
@@ -33,6 +34,11 @@ func main() {
 
 		case "2":
 			fmt.Println(day2.Dive())
+			break
+
+		case "3":
+			fmt.Println(day3.CalculatePowerUsage())
+			fmt.Println(day3.VeryifyLifeSupportRating())
 			break
 		}
 	}

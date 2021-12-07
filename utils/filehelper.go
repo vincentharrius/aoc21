@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -22,4 +23,24 @@ func ReadJson(path string, v interface{}) {
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 
 	json.Unmarshal(byteValue, v)
+}
+
+func ReadFileLineString(path string) ([]string, error) {
+
+	scanner := getFileContent(path)
+
+	var result []string
+
+	for scanner.Scan() {
+		result = append(result, scanner.Text())
+	}
+
+	return result, scanner.Err()
+}
+
+func getFileContent(filename string) *bufio.Scanner {
+	file, _ := os.Open(filename)
+
+	scanner := bufio.NewScanner(file)
+	return scanner
 }
