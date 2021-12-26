@@ -10,6 +10,7 @@ import (
 	"github.com/vincentharrius/aoc21/day3"
 	"github.com/vincentharrius/aoc21/day4"
 	"github.com/vincentharrius/aoc21/day5"
+	"github.com/vincentharrius/aoc21/day6"
 )
 
 func main() {
@@ -49,6 +50,10 @@ func main() {
 
 		case "5":
 			fmt.Println(day5.HydrothermalVenture())
+			break
+
+		case "6":
+			fmt.Println(day6.LanternFish())
 			break
 		}
 	}
