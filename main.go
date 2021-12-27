@@ -12,6 +12,7 @@ import (
 	"github.com/vincentharrius/aoc21/day5"
 	"github.com/vincentharrius/aoc21/day6"
 	"github.com/vincentharrius/aoc21/day7"
+	"github.com/vincentharrius/aoc21/day8"
 )
 
 func main() {
@@ -60,6 +61,9 @@ func main() {
 		case "7":
 			fmt.Println(day7.TheTreacheryOfWhales())
 			break
+
+		case "8":
+			fmt.Println(day8.SevenSegmentSearch())
 		}
 	}
 }
